@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +14,6 @@
     NAME : <input type="text" name="name">
     Age : <input type="text" name="age">
     BirthDay : <input type="date" name="birthDay">
-    Slady : <input type="text" name="slary">
     Gender : <input type="text" name="gender">
     Department : <input type="text" name="department">
     <button type="submit">ADD</button>
@@ -25,7 +25,6 @@
         <th>Name</th>
         <th>Age</th>
         <th>Birthday</th>
-        <th>Slady</th>
         <th>Gender</th>
         <th>Department</th>
     </tr>
@@ -37,9 +36,10 @@
             <td>${x.name}</td>
             <td>${x.age}</td>
             <td>${x.birthDay}</td>
-            <td>${x.slary}</td>
             <td>${x.gender == 0?"Nam":"Nữ"}</td>
             <td>${x.department.name}</td>
+            <td><a href="/location/delete?id=${x.id}" type="button">Xóa</a></td>
+            <td><a href="/location/showupdate?id=${x.id}" type="button">Update</a></td>
         </tr>
     </c:forEach>
     </tbody>

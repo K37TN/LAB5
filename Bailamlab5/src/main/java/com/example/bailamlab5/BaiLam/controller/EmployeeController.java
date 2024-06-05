@@ -18,12 +18,28 @@ public class EmployeeController {
 
     @GetMapping("/lost")
     public String showAll(Model model){
-        model.addAttribute("líst",employeeService.getAll());
+        model.addAttribute("list",employeeService.getAll());
         return "location/index";
     }
     @PostMapping("/add")
     public String addeEmploy(Employee employee){
         employeeService.add(employee);
+        return "redirect:/location/lost";
+    }
+    @GetMapping("/delete")
+    public String delete(Integer id){
+        employeeService.delete(id);
+        return "redirect:/location/lost";
+    }
+
+    @GetMapping("/showupdate")
+    public String show(Model model,Integer id){
+        model.addAttribute("list",employeeService.detail(id));
+        return "location/Update";
+    }
+    @PostMapping("/update")
+    public String update(Employee employee){
+        employeeService.update(employee);
         return "redirect:/location/lost";
     }
 }
