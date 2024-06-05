@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post">
+<form action="/location/add" method="post">
     NAME : <input type="text" name="name">
     Age : <input type="text" name="age">
     BirthDay : <input type="date" name="birthDay">
