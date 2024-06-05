@@ -13,7 +13,7 @@
     NAME : <input type="text" name="name">
     Age : <input type="text" name="age">
     BirthDay : <input type="date" name="birthDay">
-    Slady : <input type="text" name="slady">
+    Slady : <input type="text" name="slary">
     Gender : <input type="text" name="gender">
     Department : <input type="text" name="department">
     <button type="submit">ADD</button>
@@ -37,7 +37,7 @@
             <td>${x.name}</td>
             <td>${x.age}</td>
             <td>${x.birthDay}</td>
-            <td>${x.slady}</td>
+            <td>${x.slary}</td>
             <td>${x.gender == 0?"Nam":"Nữ"}</td>
             <td>${x.department.name}</td>
         </tr>

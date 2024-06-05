@@ -24,8 +24,8 @@ public class Employee {
     private Integer age;
     @Column(name = "birthday")
     private LocalDate birthDay;
-    @Column(name = "slady")
-    private Float slady;
+    @Column(name = "salary")
+    private Float salary;
     @Column(name = "gender")
     private Integer gender;
     @ManyToOne
