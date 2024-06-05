@@ -9,22 +9,38 @@
     <title>Document</title>
 </head>
 <body>
+<form action="" method="post">
+    NAME : <input type="text" name="name">
+    Age : <input type="text" name="age">
+    BirthDay : <input type="date" name="birthDay">
+    Slady : <input type="text" name="slady">
+    Gender : <input type="text" name="gender">
+    Department : <input type="text" name="department">
+    <button type="submit">ADD</button>
+</form>
 <table>
-<thead>
-<tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Birthday</th>
-    <th>Slady</th>
-    <th>Gender</th>
-</tr>
-</thead>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Birthday</th>
+        <th>Slady</th>
+        <th>Gender</th>
+        <th>Department</th>
+    </tr>
+    </thead>
     <tbody>
     <c:forEach items="${list}" var="x">
-    <tr>
-        <td>${}</td>
-    </tr>
+        <tr>
+            <td>${x.id}</td>
+            <td>${x.name}</td>
+            <td>${x.age}</td>
+            <td>${x.birthDay}</td>
+            <td>${x.slady}</td>
+            <td>${x.gender == 0?"Nam":"Nữ"}</td>
+            <td>${x.department.name}</td>
+        </tr>
     </c:forEach>
     </tbody>
 </table>

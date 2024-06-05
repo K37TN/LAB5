@@ -22,8 +22,8 @@ public class Employee {
     private String  name;
     @Column(name = "age")
     private Integer age;
-    @Column(name = "bỉthday")
-    private LocalDate birthday;
+    @Column(name = "birthday")
+    private LocalDate birthDay;
     @Column(name = "slady")
     private Float slady;
     @Column(name = "gender")
